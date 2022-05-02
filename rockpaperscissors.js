@@ -71,10 +71,18 @@ function determineWinner(userChoice, computerChoice) {
 
 // Step 11: test some basic stuff
 // getting a hiccup on line 12 but we'll revisit that
-console.log(determineWinner('scissors', 'rock'));
+// console.log(determineWinner('scissors', 'rock'));
 
 // Step 12: attempting to log results here
 function playGame () {
-    const userChoice = getUserChoice('rock');
+    const userChoice = getUserChoice();
+    console.log(userChoice);
     const computerChoice = getComputerChoice();
+    console.log(computerChoice);
+    return userChoice, computerChoice
 }
+// Seems to be working!
+// console.log(playGame());
+
+// Step 13: final results
+console.log(playGame(determineWinner()));
