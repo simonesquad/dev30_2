@@ -67,7 +67,7 @@ var determineWinner = function (userChoice, computerChoice) {
 }
 
 // Step 11: test some basic stuff
-var userChoice = getUserChoice('rock');
+var userChoice = getUserChoice('bomb');
 var computerChoice = getComputerChoice();
 
 console.log(determineWinner(userChoice, computerChoice));
