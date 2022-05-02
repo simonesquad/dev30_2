@@ -8,7 +8,7 @@
 // Step 1 & 2 & 3:
 
 function getUserChoice(userInput) {
-// not sure why we have a break here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
+// not sure why we are having some sort of exitential crisis here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
     const input = userInput.toLowerCase();
 
     if (input === 'rock' | 'paper' | 'scissors') {
