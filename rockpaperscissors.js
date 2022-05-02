@@ -70,16 +70,24 @@ var determineWinner = function (userChoice, computerChoice) {
 var userChoice = getUserChoice('bomb');
 var computerChoice = getComputerChoice();
 
-console.log(determineWinner(userChoice, computerChoice));
+// console.log(determineWinner(userChoice, computerChoice));
 
 // Step 12: attempting to log results here
-function playGame () {
-    const userChoice = getUserChoice();
-    console.log(userChoice);
-    const computerChoice = getComputerChoice();
-    console.log(computerChoice);
-    return userChoice, computerChoice
-}
+var playGame = function (userInput) {
+    var userChoice = getUserChoice(userInput);
+    var computerChoice = getComputerChoice();
+
+    console.log("User Choice", userChoice);
+    console.log("Computer Choice", computerChoice);
+
+    var winner = determineWinner(userChoice, computerChoice);
+
+    console.log(winner);
+};
+
+var userInput = prompt();
+
+playGame(userInput);
 // Seems to be working!
 // console.log(playGame());
 
