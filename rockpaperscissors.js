@@ -19,7 +19,7 @@ function getUserChoice(userInput) {
 }
 
 // Step 4:
-console.log(getUserChoice('CUP'));
+// console.log(getUserChoice('CUP'));
 // it is working*
 
 // Step 5:
@@ -44,8 +44,6 @@ function getComputerChoice () {
 // console.log(getComputerChoice());
 
 // Step 7 & 8 & 9 & 10: let's pick a winner teehee
-let userChoice = getUserChoice();
-let computerChoice = getComputerChoice();
 
 function determineWinner(userChoice, computerChoice) {
     if (userChoice === computerChoice) {
@@ -72,5 +70,11 @@ function determineWinner(userChoice, computerChoice) {
 }
 
 // Step 11: test some basic stuff
+// getting a hiccup on line 12 but we'll revisit that
 console.log(determineWinner(userChoice, computerChoice));
 
+// Step 12: attempting to log results here
+function playGame () {
+    const userChoice = getUserChoice('rock');
+    const computerChoice = getComputerChoice();
+}
