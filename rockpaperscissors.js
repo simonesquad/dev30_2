@@ -8,11 +8,13 @@
 // Step 1 & 2 & 3:
 
 function getUserChoice(userInput) {
+// not sure why we have a break here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
+    const input = userInput.toLowerCase();
 
-    const userInput2 = userInput.toLowerCase();
-
-    if (userInput2 === 'rock' | 'paper' | 'scissors') {
-        return userInput2
+    if (input === 'rock' | 'paper' | 'scissors') {
+        return input
+    } else if (input === 'bomb') {
+        return input
     } else {
         console.log('not valid')
     }
@@ -66,6 +68,8 @@ function determineWinner(userChoice, computerChoice) {
         } else {
             return 'user won'
         }
+    } else if (userChoice === 'bomb') {
+        return 'user won end of story'
     }
 }
 
@@ -85,4 +89,7 @@ function playGame () {
 // console.log(playGame());
 
 // Step 13: final results
-console.log(playGame(determineWinner()));
+console.log(playGame(determineWinner('rock', 'paper')));
+
+// Step 14:
+playGame();
