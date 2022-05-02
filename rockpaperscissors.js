@@ -6,17 +6,20 @@
 // tie then game ends in a draw
 
 // Step 1 & 2 & 3:
+
 function getUserChoice(userInput) {
-    userInput = userInput.toLowerCase();
-    if (userInput === 'rock' || 'paper' || 'scissors') {
-        return userInput
+
+    const userInput2 = userInput.toLowerCase();
+
+    if (userInput2 === 'rock' | 'paper' | 'scissors') {
+        return userInput2
     } else {
         console.log('not valid')
     }
 }
 
 // Step 4:
-// console.log(getUserChoice('paper'));
+console.log(getUserChoice('CUP'));
 // it is working*
 
 // Step 5:
@@ -37,6 +40,37 @@ function getComputerChoice () {
         return 'scissors'
     }
 }
+// Step 6: it works!
+// console.log(getComputerChoice());
 
-console.log(getComputerChoice());
+// Step 7 & 8 & 9 & 10: let's pick a winner teehee
+let userChoice = getUserChoice();
+let computerChoice = getComputerChoice();
+
+function determineWinner(userChoice, computerChoice) {
+    if (userChoice === computerChoice) {
+        return 'tie'
+    } else if (userChoice === 'rock') {
+        if (computerChoice === 'paper') {
+            return 'computer won'
+        } else {
+            return 'user won'
+        }
+    } else if (userChoice === 'paper') {
+        if (computerChoice === 'scissors') {
+            return 'computer won'
+        } else {
+            return 'user won'
+        }
+    } else if (userChoice === 'scissors') {
+        if (computerChoice === 'rock') {
+            return 'computer won'
+        } else {
+            return 'user won'
+        }
+    }
+}
+
+// Step 11: test some basic stuff
+console.log(determineWinner(userChoice, computerChoice));
 
