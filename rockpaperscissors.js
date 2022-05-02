@@ -7,47 +7,40 @@
 
 // Step 1 & 2 & 3:
 
-function getUserChoice(userInput) {
-// not sure why we are having some sort of exitential crisis here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
-    const input = userInput.toLowerCase();
+var getUserChoice = function (userInput) {
+    userInput = userInput.toLowerCase();
 
-    if (input === 'rock' | 'paper' | 'scissors') {
-        return input
-    } else if (input === 'bomb') {
-        return input
+    if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
+        return userInput;
+    } else if (userInput === 'bomb') {
+        return userInput
     } else {
-        console.log('not valid')
+        console.log('That is not a valid answer.')
     }
-}
+};
 
 // Step 4:
-// console.log(getUserChoice('CUP'));
+// console.log(getUserChoice('Rock'));
 // it is working*
 
 // Step 5:
-function getComputerChoice () {
-    function getRandInt(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min + 1) + min);
-    }
+var getComputerChoice = function () {
+    var randomNumber = Math.floor(Math.random() * 3);
 
-    let result = getRandInt(0, 2)
-
-    if (result === 0) {
+    if (randomNumber === 0) {
         return 'rock'
-    } else if (result === 1) {
-        return 'paper'
-    } else if (result === 2) {
+    } else if (randomNumber === 1) {
+        return 'paper';
+    } else if (randomNumber === 2) {
         return 'scissors'
     }
-}
+};
 // Step 6: it works!
 // console.log(getComputerChoice());
 
 // Step 7 & 8 & 9 & 10: let's pick a winner teehee
 
-function determineWinner(userChoice, computerChoice) {
+var determineWinner = function (userChoice, computerChoice) {
     if (userChoice === computerChoice) {
         return 'tie'
     } else if (userChoice === 'rock') {
@@ -74,8 +67,10 @@ function determineWinner(userChoice, computerChoice) {
 }
 
 // Step 11: test some basic stuff
-// getting a hiccup on line 12 but we'll revisit that
-// console.log(determineWinner('scissors', 'rock'));
+var userChoice = getUserChoice('rock');
+var computerChoice = getComputerChoice();
+
+console.log(determineWinner(userChoice, computerChoice));
 
 // Step 12: attempting to log results here
 function playGame () {
@@ -89,7 +84,7 @@ function playGame () {
 // console.log(playGame());
 
 // Step 13: final results
-console.log(playGame(determineWinner('rock', 'paper')));
+// console.log(playGame(determineWinner('rock', 'paper')));
 
 // Step 14:
-playGame();
+// playGame();
