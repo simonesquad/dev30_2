@@ -71,7 +71,7 @@ function determineWinner(userChoice, computerChoice) {
 
 // Step 11: test some basic stuff
 // getting a hiccup on line 12 but we'll revisit that
-console.log(determineWinner(userChoice, computerChoice));
+console.log(determineWinner('scissors', 'rock'));
 
 // Step 12: attempting to log results here
 function playGame () {
